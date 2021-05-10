@@ -1,0 +1,96 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deal_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/deal_list_item_image_view"
+        android:layout_width="@dimen/deal_list_item_image_width"
+        android:layout_height="@dimen/deal_list_item_image_height"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/product_image"/>
+
+    <TextView
+        android:id="@+id/deal_list_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#B3000000"
+        app:layout_constraintStart_toEndOf="@id/deal_list_item_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="This is the title \n second line of title" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/gray_color"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/deal_list_item_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/deal_list_item_image_view" />
+
+    <TextView
+        android:id="@+id/deal_list_item_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:textColor="#B3000000"
+        app:layout_constraintBottom_toBottomOf="@id/deal_list_item_aisle"
+        app:layout_constraintEnd_toStartOf="@id/deal_list_item_ship"
+        app:layout_constraintTop_toTopOf="@id/deal_list_item_aisle"
+        app:layout_constraintStart_toEndOf="@id/deal_list_item_image_view"
+        tools:text="This is the price" />
+
+    <TextView
+        android:id="@+id/deal_list_item_aisle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/red_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:background="@drawable/ic_isle_background"
+        tools:text="B1" />
+
+    <TextView
+        android:id="@+id/deal_list_item_or"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/deal_list_item_aisle"
+        app:layout_constraintBottom_toBottomOf="@id/deal_list_item_aisle"
+        app:layout_constraintEnd_toStartOf="@id/deal_list_item_aisle"
+        android:text="@string/or" />
+
+    <TextView
+        android:id="@+id/deal_list_item_ship"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:textSize="14sp"
+        android:textColor="@color/black_color"
+        app:layout_constraintTop_toTopOf="@id/deal_list_item_aisle"
+        app:layout_constraintBottom_toBottomOf="@id/deal_list_item_aisle"
+        app:layout_constraintEnd_toStartOf="@id/deal_list_item_or"
+        android:text="@string/ship" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
